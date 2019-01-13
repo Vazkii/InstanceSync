@@ -3,7 +3,8 @@ package vazkii.instancesync;
 public class Instance {
 
 	public Addon[] installedAddons;
-	
+	public Scan[] cachedScans;
+
 	public static class Addon {
 		
 		public AddonFile installedFile;
@@ -24,6 +25,12 @@ public class Instance {
 			}
 			
 		}
+		
+	}
+	
+	public static class Scan {
+		
+		public String folderName;
 		
 	}
 	

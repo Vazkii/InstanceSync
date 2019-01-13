@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 import vazkii.instancesync.Instance.Addon;
 import vazkii.instancesync.Instance.Addon.AddonFile;
+import vazkii.instancesync.Instance.Scan;
 
 public class DownloadManager {
 
@@ -47,6 +48,9 @@ public class DownloadManager {
 			System.out.println("Downloads were interrupted!");
 			e.printStackTrace();
 		}
+		
+		for(Scan s : instance.cachedScans)
+			acceptableFilenames.add(s.folderName);
 
 		deleteRemovedMods();
 	}
