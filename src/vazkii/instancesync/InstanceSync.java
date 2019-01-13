@@ -7,8 +7,12 @@ import java.io.IOException;
 import com.google.gson.Gson;
 
 public final class InstanceSync {
+	
+	private static final String VERSION = "1.0.2";
 
 	public static void main(String[] args) {
+		System.out.println("InstanceSync " + VERSION);
+		
 		long time = System.currentTimeMillis();
 		File dir = new File(".");
 		System.out.println("Running in " + dir.getAbsolutePath());
