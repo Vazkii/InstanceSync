@@ -16,13 +16,19 @@ public class Instance {
 		
 		public static class AddonFile {
 			
-			public String fileNameOnDisk;
+			private String fileNameOnDisk;
+			private String FileNameOnDisk;
 			public String downloadUrl;
 			
 			@Override
 			public String toString() {
 				return fileNameOnDisk;
 			}
+			
+			public String getFileName() {
+				return fileNameOnDisk != null ? fileNameOnDisk : FileNameOnDisk;
+			}
+			
 			
 		}
 		

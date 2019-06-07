@@ -60,9 +60,10 @@ public class DownloadManager {
 		if(file == null)
 			return;
 
-		acceptableFilenames.add(file.fileNameOnDisk);
+		String filenameOnDisk = file.getFileName();
+		acceptableFilenames.add(filenameOnDisk);
 
-		File modFile = new File(modsDir, file.fileNameOnDisk);
+		File modFile = new File(modsDir, filenameOnDisk);
 		if(!modExists(modFile))
 			download(modFile, file.downloadUrl);
 	}
