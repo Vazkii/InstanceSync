@@ -22,3 +22,6 @@ InstanceSync can
   * If your repository doesn't have a .gitignore file, just extract the included one
 * Run  setup.bat or setup.sh, whichever is appropriate for your OS
 * Add something to your repository's README that tells people to run the setup script
+
+## License
+just go wtfpl lol
