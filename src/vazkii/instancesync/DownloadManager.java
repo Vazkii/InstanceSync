@@ -76,7 +76,8 @@ public class DownloadManager {
 				System.out.println("Downloading " + name);
 				long time = System.currentTimeMillis(); 
 
-				URL url = new URL(downloadUrl);
+				String downloadUrlEscaped = downloadUrl.replaceAll(" ", "%20");
+				URL url = new URL(downloadUrlEscaped);
 				FileOutputStream out = new FileOutputStream(target);
 
 				URLConnection connection = url.openConnection();
